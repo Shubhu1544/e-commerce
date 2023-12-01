@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/owl.theme.green.min.css' />
+    <link rel='stylesheet' href='/stylesheets/all.min.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/owl.carousel.min.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .box-2 {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(13.5px);
+            -webkit-backdrop-filter: blur(13.5px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            position: relative;
+            top: 150px;
+
+            height: 350px;
+        }
+
+        form {
+            position: absolute;
+        }
+
+        label {
+            color: aliceblue;
+        }
+
+        input {
+            background-color: transparent;
+            border: 0;
+            border-bottom: 5px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body class="bg-black">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 box-2">
+            <div class="box-1 d-flex justify-content-center">
+                <form class="img" action="/adminlogins" method="post">
+                    <div class="box">
+                        <div class="sp">
+                            <h1 class="text-white">Admin log in</h1><br><br>
+                            <div class="log">
+                                <label for="username" class="text-white">User Name</label>&nbsp;
+                                <i class="fa-regular fa-envelope text-white"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="text" class="input border-bottom text-white" autocomplete="off" placeholder="username"
+                                    name="username"><br><br><br>
+                                    <span id="show-email"></span>
+                            </div>
+                            <div class="log">
+                                <label for="username" class="text-white">password</label>&nbsp;
+                                <i class="fa-solid fa-unlock text-white"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="password" class="input border-bottom text-white" autocomplete="off" placeholder="password"
+                                    name="password"><br><br><br>
+                                    <span id="show-pass"></span>
+                            </div>
+                            <div class="log d-flex justify-content-center">
+                                <input type="submit" class="btn btn-secondary py-3 px-5" id="submit_btn" value="sign in">
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/bootstrap.bundle.js"></script>
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#show-email').hide();
+      $('#show-pass').hide();
+
+      var email_err = true;
+      var pass_err = true;
+
+      
+
+      $('#username').keyup(function () {
+        email_error();
+      });
+      function email_error() {
+        var email_val = $('#username').val();
+
+        if (email_val.length == "") {
+          $('#show-email').show();
+          $('#show-email').html("**plzz fill your username**");
+          $('#show-email').css('color', 'red');
+          $('#show-email').focus();
+          email_err = false;
+          return false;
+        }
+        else {
+          $('#show-email').hide();
+          return true;
+        }
+      }
+
+      $('#password').keyup(function () {
+        pass_error();
+      });
+      function pass_error() {
+        var pass_val = $('#password').val();
+        if (pass_val.length == "") {
+          $('#show-pass').show();
+          $('#show-pass').html("**plzz fill the password name**");
+          $('#show-pass').css('color', 'red');
+          $('#show-pass').focus();
+          pass_err = false;
+          return false;
+        }
+        else if ((pass_val.length <= 3) || (pass_val.length >= 15)) {
+          $('#show-pass').show();
+          $('#show-pass').html("**plzz your password must be 3 and 15**");
+          $('#show-pass').css('color', 'red');
+          $('#show-pass').focus();
+          pass_err = false;
+          return false;
+        }
+        else {
+          $('#show-pass').hide();
+          return true;
+        }
+      }
+
+      $('#submit_btn').click(function () {
+        email_err = true;
+        pass_err = true;
+
+        email_error();
+        pass_error();
+
+        if (email_error() == true && pass_error() == true) {
+          // console.log( true)
+          return true;
+        }
+        else {
+          // console.log( false)
+          return false;
+        }
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>

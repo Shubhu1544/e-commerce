@@ -1,0 +1,143 @@
+
+body{
+  padding: 0px;
+  margin: 0px;
+}
+.hee::after
+{
+    content:'';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #67ec72;
+    transition: 0.5s;
+}
+.hee:hover::after
+{
+    width: 100%;
+    transition: 0.5s;
+}
+ul li a
+{
+    transition: 0.5s;
+}
+ul li a:hover
+{
+    color: rgb(72, 67, 67) !important;
+    
+}
+.review{
+  padding-top: 50px!important;
+  
+}
+.footer{
+  background-color: #614d4d00;
+  color: azure;
+}
+.navbar-brand{
+  height: 90px !important;
+}
+.header-1{
+  position: sticky!important;
+  top: 0;
+  z-index: 9999;
+}
+.height{
+  height: 700px;
+}
+.bg-black{
+  background-color: black;
+}
+section {
+  width: 40em;
+  height: 25em;
+  margin: 0 auto;
+  position: relative;
+}
+.circle{
+  border-radius: 50%;
+  overflow: hidden;
+}
+.circle1{
+  width: 100%;
+}
+section li {
+  width: 500px;
+  height: 281px;
+  background: #333;
+  display: inline-block;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+}
+
+/* section li p {
+  color: white;
+  font-weight: bold;
+  font-size: 5em;
+  text-align: center;
+  margin-top: 1.175em;
+} */
+.aa{
+  border-radius: 50%;
+  width: 50px;
+}
+tr{
+  color: white;
+}
+th{
+  color: white;
+}
+.about{
+  font-size: 15px;
+}
+.items {
+  position: absolute;
+}
+
+.main-pos {
+  margin-left: 2em !important;
+  z-index: 3000;
+  /*background-image: url('https://dl.dropbox.com/u/32649907/imgs/shadow.png');*/
+}
+.ad{
+  border-radius: 30px;
+  height: 300px;
+  
+}
+.left-pos {
+  opacity: .3;
+  margin-left: -17em !important;
+  z-index: 1000;
+  -webkit-transform: scale(.75);
+  -moz-transform: scale(.75);
+  transform: scale(.75);
+}
+
+.back-pos {
+  margin-left: 2em !important;
+  opacity: .05;
+  -webkit-transform: scale(.5);
+  -moz-transform: scale(.5);
+  transform: scale(.5);
+}
+
+.right-pos {
+  opacity: .3;
+  margin-left:  21em !important;
+  z-index: 1000;
+  -webkit-transform: scale(.75);
+  -moz-transform: scale(.75);
+  transform: scale(.75);
+}
+
+section span {
+  position: relative;
+  margin: 0 auto;
+  left: 17em;
+  top: 20em;
+}
+.ro-bo{
+  border-radius: 10px;
+}

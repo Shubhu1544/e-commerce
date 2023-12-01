@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>unique people</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/owl.theme.green.min.css' />
+  <link rel='stylesheet' href='/stylesheets/all.min.css' />
+  <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+  <link rel='stylesheet' href='/stylesheets/owl.carousel.min.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .imgbox img{
+        height: 250px;
+        width: 190px;
+    }
+  </style>
+</head>
+
+<body class="bg-black">
+  <!-- <body> -->
+  <div class="container-fluid">
+    <div class="container p-2">
+      <div class="row ">
+        <div class="col-4 ">
+          <ul class="list-unstyled p-0 d-flex m-0 ">
+            <li class="me-2 "><a href="" class="text-decoration-none pe-2 text-white"><i
+                  class=" font-wai fa-regular fa-envelope light pe-1"></i>own23@gmail.com</a></li>
+            <li><a href="" class="text-decoration-none text-white"><i class="fa-solid fa-shop me-2"></i>Your
+                Shop</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-4 d-flex justify-content-center">
+          <ul class="list-unstyled m-0 ">
+            <li><a href="" class="text-decoration-none text-white justify-content-center">HAVE ANY QUESTION
+                ? +91
+                7817853425 </a></li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <ul class="main list-unstyled d-flex justify-content-end m-0">
+            <li class="pe-2"><a href="" class="text-decoration-none text-white"><i
+                  class="fa-brands fa-facebook-f pe-1"></i></a></li>
+            <li class="pe-2"><a href="" class="text-decoration-none text-white"><i
+                  class="fa-brands fa-twitter pe-1"></i></a></li>
+            <li class="pe-2"><a href="" class="text-decoration-none text-white"><i
+                  class="fa-solid fa-map-location-dot pe-1"></i></a></li>
+            <li class="pe-2"><a href="" class="text-decoration-none text-white"><i
+                  class="fa-solid fa-shop pe-1"></i></i></a></li>
+            <li class="pe-2"><a href="" class="text-decoration-none text-white"><i
+                  class="fa-brands fa-instagram pe-1 "></i></a></li>
+            <li class="pe-2"><a href="" class="text-decoration-none text-white"><i
+                  class="fa-brands fa-youtube pe-1"></i></a></li">
+            <li class="pe-2"><a href="" class="text-decoration-none text-white"><i
+                  class="fa-brands pe-1 fa-whatsapp"></i></a></li">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light header-1 py-3">
+        <div class="container">
+          <a class="navbar-brand w-50" href="/">
+            <img class="w-50" src="/images/Untitled_1.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="w-50 py-3 ">
+            <ul class=" d-flex list-unstyled justify-content-end m-0">
+              <li class="nav-item "><a href="" class="text-decoration-none text-white-50 px-3"><i
+                    class="fa-solid fa-magnifying-glass"></i></a></li>
+              <li class="nav-item"><a href="./signup" class="text-decoration-none text-white-50 px-3"><i
+                    class="fa-regular fa-user"></i></a></li>
+              <li class="nav-item"><a href="" class="text-decoration-none text-white-50 px-3"><i
+                    class="fa-regular fa-heart"></i></a></li>
+              <li class="nav-item"><a href="" class="text-decoration-none text-white-50 px-3"><i
+                    class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </div>
+  </header>
+
+  <div class="container-fluid mt-5 ">
+    <div class="container">
+      <ul class="nav nav-tabs mb-5">
+        <li class="active car-info"><a data-toggle="tab" class="text-info" href="#watch">watch</a></li>
+        <li class="car-info"><a data-toggle="tab" class="text-info" href="#sunglasses">Sunglasses</a></li>
+        <li class="inq-info"><a data-toggle="tab" class="text-info" href="#Shoes">Shoes</a></li>
+        <li class="inq-info"><a data-toggle="tab" class="text-info" href="#Accessories">Accessories</a></li>
+        <li class="inq-info"><a data-toggle="tab" class="text-info" href="#Perfumes">Perfumes</a></li>
+        <li class="inq-info"><a data-toggle="tab" class="text-info" href="#Bags">Bags</a></li>
+      </ul>
+
+      <div class="tab-content ">
+
+        
+        <div id="watch" class="tab-pane fade in active ">
+          <h3 class="mt-5 text-white">watch</h3>
+          <div class="container mt-5 row">
+            <% for(let i=0;i< watchh.length ;i++){ %>
+              <div class="col-3 d-flex justify-content-center"><td class="p-4"><a href="./cart?delteid=<%= watchh[i]._id %>" class=""><i class="d-flex d-inline justify-content-end  fa-solid fa-trash"></i></a></td>
+              <div class="pt-4">
+                <div class="card-2 ro-bo ">
+                  <div class="imgbox">
+                    <img src="/images/<%= watchh[i].product.product_images %>" alt="" class=" ro-bo ">
+                  </div>
+                  <div class="about text-center "><br>
+                    <p class="text-white">
+                      <%= watchh[i].product.product_name %>
+                    </p>
+                    <p class="text-white">
+                      <%= watchh[i].product.price %>
+                    </p>
+                  </div>
+                  <a href="" class="btn btn-warning btn-outline-dark d-flex justify-content-center">buy</a>
+                </div>
+              </div>
+          </div>
+              <% } %>            
+          </div>
+        </div>
+
+        <div id="sunglasses" class="tab-pane fade">
+          <h3 class="mt-5 text-white">Sunglasses</h3>
+          <div class="container mt-5 row">
+            <% for(let i=0;i< sun.length ;i++){ %>
+              <div class="col-3 d-flex justify-content-center"><a href="./cart?sundelteid=<%= sun[i]._id %>" class=""><i class="d-flex d-inline justify-content-end  fa-solid fa-trash"></i></a></td>
+              <div class="pt-4">
+                <div class="card-2 ro-bo ">
+                  <div class="imgbox">
+                    <img src="/images/<%= sun[i].product_sunglasses.product_images %>" alt="" class=" ro-bo ">
+                  </div>
+                  <div class="about text-center "><br>
+                    <p class="text-white">
+                      <%= sun[i].product_sunglasses.product_name %>
+                    </p>
+                    <p class="text-white">
+                      <%= sun[i].product_sunglasses.price %>
+                    </p>
+                  </div>
+                  <a href="" class="btn btn-warning btn-outline-dark d-flex justify-content-center">buy</a>
+                </div>
+              </div>
+          </div>
+              <% } %>
+          </div>
+        </div>
+
+        <div id="Shoes" class="tab-pane fade">
+            <h3 class="mt-5">Shoes</h3>
+            <div class="container mt-5">
+              <% for(let i=0;i< shoes.length ;i++){ %>
+                <div class="col-3 d-flex justify-content-center"><a href="./cart?shoesdelteid=<%= shoes[i]._id %>" class=""><i class="d-flex d-inline justify-content-end  fa-solid fa-trash"></i></a></td>
+                <div class="pt-4">
+                  <div class="card-2 ro-bo ">
+                    <div class="imgbox">
+                      <img src="/images/<%= shoes[i].product_Shoes.product_images %>" alt="" class=" ro-bo ">
+                    </div>
+                    <div class="about text-center "><br>
+                      <p class="text-white">
+                        <%= shoes[i].product_Shoes.product_name %>
+                      </p>
+                      <p class="text-white">
+                        <%= shoes[i].product_Shoes.price %>
+                      </p>
+                    </div>
+                    <a href="" class="btn btn-warning btn-outline-dark d-flex justify-content-center">buy</a>
+                  </div>
+                </div>
+            </div>
+                <% } %>
+            </div>
+          </div>
+
+        <div id="Accessories" class="tab-pane fade">
+            <h3 class="mt-5 text-white">Accessories</h3>
+            <div class="container mt-5 row">
+              <% for(let i=0;i< acce.length ;i++){ %>
+                <div class="col-3 d-flex justify-content-center"><a href="./cart?accedelteid=<%= acce[i]._id %>" class=""><i class="d-flex d-inline justify-content-end  fa-solid fa-trash"></i></a></td>
+                <div class="pt-4">
+                  <div class="card-2 ro-bo ">
+                    <div class="imgbox">
+                      <img src="/images/<%= acce[i].product_Accessories.product_images %>" alt="" class=" ro-bo ">
+                    </div>
+                    <div class="about text-center "><br>
+                      <p class="text-white">
+                        <%= acce[i].product_Accessories.product_name %>
+                      </p>
+                      <p class="text-white">
+                        <%= acce[i].product_Accessories.price %>
+                      </p>
+                    </div>
+                    <a href="" class="btn btn-warning btn-outline-dark d-flex justify-content-center">buy</a>
+                  </div>
+                </div>
+            </div>
+                <% } %>
+            </div>
+          </div>
+
+          <div id="Perfumes" class="tab-pane fade">
+            <h3 class="mt-5 text-white">Perfumes</h3>
+            <div class="container mt-5 row">
+              <% for(let i=0;i< perf.length ;i++){ %>
+                <div class="col-3 d-flex justify-content-center"><a href="./cart?perfdelteid=<%= perf[i]._id %>" class=""><i class="d-flex d-inline justify-content-end  fa-solid fa-trash"></i></a></td>
+                <div class="pt-4">
+                  <div class="card-2 ro-bo ">
+                    <div class="imgbox">
+                      <img src="/images/<%= perf[i].product_Perfumes.product_images %>" alt="" class=" ro-bo ">
+                    </div>
+                    <div class="about text-center "><br>
+                      <p class="text-white">
+                        <%= perf[i].product_Perfumes.product_name %>
+                      </p>
+                      <p class="text-white">
+                        <%= perf[i].product_Perfumes.price %>
+                      </p>
+                    </div>
+                    <a href="" class="btn btn-warning btn-outline-dark d-flex justify-content-center">buy</a>
+                  </div>
+                </div>
+            </div>
+                <% } %>
+            </div>
+          </div>
+
+          <div id="Bags" class="tab-pane fade">
+            <h3 class="mt-5 text-white">Bags</h3>
+            <div class="container mt-5 row">
+            <% for(let i=0;i< bag.length ;i++){ %>
+                <div class="col-3 d-flex justify-content-center"><a href="./cart?bagdelteid=<%= bag[i]._id %>" class=""><i class="d-flex d-inline justify-content-end  fa-solid fa-trash"></i></a></td>
+                <div class="pt-4">
+                  <div class="card-2 ro-bo ">
+                    <div class="imgbox">
+                      <img src="/images/<%= bag[i].product_bag.product_images %>" alt="" class=" ro-bo ">
+                    </div>
+                    <div class="about text-center "><br>
+                      <p class="text-white">
+                        <%= bag[i].product_bag.product_name %>
+                      </p>
+                      <p class="text-white">
+                        <%= bag[i].product_bag.price %>
+                      </p>
+                    </div>
+                    <a href="" class="btn btn-warning btn-outline-dark d-flex justify-content-center">buy</a>
+                  </div>
+                </div>
+            </div>
+                <% } %>
+            </div>
+          </div>
+        
+
+        
+        
+        
+      </div>
+      <!-- tab's close -->
+    </div>
+    <!-- id tab's close -->
+  </div>
+</div>
+
+<!-- main tab's close -->
+
+
+
+  <br><br><br>
+  <div class="container">
+  <footer class="text-white">
+    <p class="care-no-info text-white-50">Customer Care Number:-</p>
+    <h3>+91 76220 08166</h3>
+    <h3>contact@uniquepeople.in</h3>
+    <img src="/images/payment.png" alt="payment">
+    <p class="last-info text-white-50"> © 2021, UNIQUE PEOPLE. All Rights Reserved.</p>
+  </footer>
+</div>
+
+
+  <script src="/javascripts/bootstrap.bundle.js"></script>
+  <script src="/javascripts/jquery.min.js"></script>
+  <script src="/javascripts/owl.carousel.min.js"></script>
+
+</body>
+
+</html>
